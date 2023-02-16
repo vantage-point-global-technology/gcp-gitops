@@ -30,6 +30,7 @@ module "vpc" {
 module "http_server" {
   source  = "../../modules/http_server"
   project = "${var.project}"
+  zone = "${var.zone}"
   subnet  = "${module.vpc.subnet}"
 }
 
